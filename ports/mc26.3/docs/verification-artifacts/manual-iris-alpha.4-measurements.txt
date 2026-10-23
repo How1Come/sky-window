@@ -1,0 +1,5 @@
+Sky Window render smoke test
+23-walk-still-no-bob time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 player_x=84.5 bob=false manual=true
+24-walk-moving-no-bob time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 player_x=118.77784944419363 bob=false manual=true
+25-walk-moving-bob time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 player_x=118.77784944419363 bob=true manual=true
+26-walk-moving-bob-rebuild time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 player_x=123.09503081235664 bob=true manual=true

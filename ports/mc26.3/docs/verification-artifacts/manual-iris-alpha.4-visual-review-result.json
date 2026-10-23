@@ -1,0 +1,13 @@
+{
+  "minecraft": "26.3",
+  "result": "failed",
+  "artifact_sha256": "b080cae93c8bdcabf2215dfdae071c971305a140dc6cbc6088d8b46f65a7077b",
+  "captures_sha256": {
+    "23-walk-still-no-bob.png": "3f9e820a6cecfa87592b449808df4d950ab956677fc16c381f99502617aa5d31",
+    "24-walk-moving-no-bob.png": "c1f2ebb3baa9a1089cc943f26ac942a85f3611a2f74eb46297ca4a2d27e433e3",
+    "25-walk-moving-bob.png": "8eaaa85e6f100c5e6ffd2cb6e828a3bb7e8c7b99153bf845eddfe2a2e3eb3209",
+    "26-walk-moving-bob-rebuild.png": "78384bcfb99f34769b8dc7fff4603b4b5ad0ab6ba8d3b6dad26d357941278a83"
+  },
+  "recorded_at": "2026-10-04T05:52:19.746990+00:00",
+  "review_notes": "Primary agent inspected the four final captures. Scene 23 still view appears continuous, but scene 24 walking without bobbing exposes horizontal native sky bands; scene 25 walking with bobbing exposes a diagonal sky wedge; scene 26 walking with a chunk rebuild exposes native sky beneath the manual ceiling. Clean process exit does not establish correct rendering."
+}

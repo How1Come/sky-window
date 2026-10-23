@@ -1,0 +1,162 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version '1.18.2'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://api.modrinth.com/maven'
+        content { includeGroup 'maven.modrinth' }
+    }
+}
+
+sourceSets {
+    clientTest
+}
+
+loom {
+    splitEnvironmentSourceSets()
+    mods {
+        sky_window {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+        sky_window_client_test {
+            sourceSet sourceSets.clientTest
+        }
+    }
+    runs {
+        clientSmoke {
+            client()
+            source(sourceSets.clientTest)
+            runDir providers.gradleProperty('movementSmoke').isPresent() ? 'run/client-smoke-movement'
+                    : providers.gradleProperty('irisDisabledSmoke').isPresent() ? 'run/client-smoke-iris-off' : 'run/client-smoke'
+            property 'sky_window.smoke.movement', providers.gradleProperty('movementSmoke').isPresent().toString()
+            property 'sky_window.smoke.assertMovement', (!providers.gradleProperty('irisSmoke').isPresent()
+                    && !providers.gradleProperty('resourceSmoke').isPresent()
+                    && !providers.gradleProperty('skipMovementAssertion').isPresent()).toString()
+            property 'sky_window.smoke.output', file(providers.gradleProperty('smokeOutput').getOrElse(
+                    providers.gradleProperty('movementSmoke').isPresent() ? 'build/render-test-movement'
+                    : providers.gradleProperty('irisDisabledSmoke').isPresent() ? 'build/render-test-iris-off' : providers.gradleProperty('irisSmoke').isPresent()
+                    ? 'build/render-test-iris' : providers.gradleProperty('resourceSmoke').isPresent()
+                    ? 'build/render-test-resources' : 'build/render-test')).absolutePath
+            programArgs '--width', '1280', '--height', '720'
+        }
+    }
+}
+
+sourceSets.clientTest {
+    compileClasspath += sourceSets.main.output + sourceSets.client.output + sourceSets.client.compileClasspath
+    runtimeClasspath += output + compileClasspath + sourceSets.client.runtimeClasspath
+}
+
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = 'sky_window_gametest'
+        enableGameTests = true
+        enableClientGameTests = false
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    if (providers.gradleProperty('irisSmoke').isPresent() || providers.gradleProperty('irisDisabledSmoke').isPresent()) {
+        modLocalRuntime files('../../.tooling/compat/modern121/1.21.7/iris-fabric-1.9.6+mc1.21.8.jar',
+                '../../.tooling/compat/modern121/1.21.7/sodium-fabric-0.7.2+mc1.21.8.jar')
+        runtimeOnly fileTree('../../.tooling/compat/modern121/1.21.7/nested') { include '*.jar' }
+    }
+    testImplementation platform('org.junit:junit-bom:5.12.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand 'version': inputs.properties.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    from('LICENSE') {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}
+
+tasks.configureEach {
+    if (name == "downloadAssets") {
+        doNotTrackState("Minecraft assets are shared across compatibility builds")
+    }
+}
+
+tasks.withType(JavaExec).configureEach {
+    if (name == "runClientSmoke" && providers.gradleProperty("smokeJavaHome").isPresent()) {
+        executable = file(providers.gradleProperty("smokeJavaHome").get() + "/bin/java").absolutePath
+    }
+}
+
+tasks.configureEach {
+    if (name == "runClientSmoke" && providers.gradleProperty("irisDisabledSmoke").isPresent()) {
+        doFirst {
+            def config = file(providers.gradleProperty("movementSmoke").isPresent()
+                    ? "run/client-smoke-movement/config/iris.properties" : "run/client-smoke-iris-off/config/iris.properties")
+            config.parentFile.mkdirs()
+            config.text = "enableShaders=false\nshaderPack=\n"
+        }
+    }
+    if (name == "runClientSmoke" && providers.gradleProperty("movementSmoke").isPresent()) {
+        doFirst {
+            def instance = file("run/client-smoke-movement")
+            def config = new File(instance, "config/iris.properties")
+            config.parentFile.mkdirs()
+            if (providers.gradleProperty("irisSmoke").isPresent()) {
+                copy {
+                    from "run/client-smoke/shaderpacks"
+                    into new File(instance, "shaderpacks")
+                }
+                config.text = "enableShaders=true\nshaderPack=ComplementaryReimagined_r5.9.3.zip\n"
+            } else {
+                config.text = "enableShaders=false\nshaderPack=\n"
+            }
+            def options = new File(instance, "options.txt")
+            def lines = options.exists() ? options.readLines().findAll { !it.startsWith("resourcePacks:") } : []
+            if (providers.gradleProperty("resourceSmoke").isPresent()) {
+                copy {
+                    from "run/client-smoke/resourcepacks/sky-window-test.zip"
+                    into new File(instance, "resourcepacks")
+                }
+                lines.add('resourcePacks:["vanilla","fabric","file/sky-window-test.zip"]')
+            } else {
+                lines.add('resourcePacks:["vanilla","fabric"]')
+            }
+            options.text = lines.join("\n") + "\n"
+        }
+    }
+}

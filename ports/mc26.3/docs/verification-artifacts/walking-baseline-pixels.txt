@@ -1,0 +1,4 @@
+23-walk-still-no-bob clear_sky_fraction=1.0
+24-walk-moving-no-bob clear_sky_fraction=1.0
+25-walk-moving-bob clear_sky_fraction=0.0
+26-walk-moving-bob-rebuild clear_sky_fraction=0.0

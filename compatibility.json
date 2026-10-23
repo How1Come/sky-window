@@ -1,0 +1,2885 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-23T16:16:25.998786+00:00",
+  "loader": "fabric",
+  "target_count": 23,
+  "targets": [
+    {
+      "minecraft": "26.3",
+      "java": 25,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/4fe1aa1ef8da1cb95c5bad1fb98890ca56dd8ca3/26.3.json",
+      "project": "ports/mc26.3",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.161.0+26.3",
+        "iris": {
+          "version": "1.11.6+mc26.3",
+          "source": "https://modrinth.com/mod/iris/versions?g=26.3"
+        },
+        "sodium": {
+          "version": "0.9.2+mc26.3",
+          "source": "https://modrinth.com/mod/sodium/versions?g=26.3"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc26.3/build/libs/sky-window-0.3.0-alpha.5+mc26.3.jar",
+        "expected_version": "0.3.0-alpha.5+mc26.3",
+        "status": "valid",
+        "sha256": "1356c2f176b339592909afd93ae61ccc26f7be725bbd20f5a5aeca6fc96a2100",
+        "bytes": 77341,
+        "class_major_versions": [
+          69
+        ],
+        "java": 25,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.5+mc26.3",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "26.3",
+            "java": ">=25",
+            "fabric-api": ">=0.161.0+26.3"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/gui-26.3-static.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": "ports/mc26.3/build/verification/server-gametest.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc26.3/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": false,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc26.3/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-09-30T15:16:58.930123+00:00",
+          "artifact_relation": "predates_artifact",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window"
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-alpha5",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": false,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "expected_captures": 22,
+          "completion": "ports/mc26.3/build/render-test-alpha5/COMPLETE.txt",
+          "completed_at": "2026-10-04T06:10:24.005866+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-26.3-static.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "run_record": "ports/mc26.3/build/render-test-alpha5/run-record.json"
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-iris",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": false,
+          "settings_mode": "mixed",
+          "kind": "shader",
+          "expected_captures": 22,
+          "completion": "ports/mc26.3/build/render-test-iris/COMPLETE.txt",
+          "completed_at": "2026-09-30T15:33:48.244511+00:00",
+          "artifact_relation": "predates_artifact",
+          "shader_pack": "ComplementaryReimagined_r5.9.3.zip",
+          "shader_profile": "HIGH (+0 options changed by user)",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium"
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-iris-off",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": false,
+          "settings_mode": "mixed",
+          "kind": "iris_off_static",
+          "expected_captures": 22,
+          "completion": "ports/mc26.3/build/render-test-iris-off/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:44:41.975535+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/26x/263-iris-off.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium"
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-iris-on-alpha5",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "shader",
+          "profile": "iris-on",
+          "expected_captures": 22,
+          "completion": "ports/mc26.3/build/render-test-iris-on-alpha5/COMPLETE.txt",
+          "completed_at": "2026-10-04T06:06:30.589362+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-26.3-iris-on.log",
+          "process_exit": "successful",
+          "shader_pack": "ComplementaryReimagined_r5.9.3.zip",
+          "shader_profile": "HIGH (+0 options changed by user)",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "run_record": "ports/mc26.3/build/render-test-iris-on-alpha5/run-record.json",
+          "proof": "ports/mc26.3/build/render-test-iris-on-alpha5/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "review_notes": "Reviewed all22 alpha.5 static shader scenes: native day/night/clouds/weather, settings panel, manual thunder/snow/noon, independent ceilings, opaque foreground, nearest live and custom stacked windows, and reset. Earlier renderer review enlarged scenes17-20; primary agent independently inspected the complete contact sheet. Complementary Reimagined r5.9.3 HIGH, actual Java25, and clean exit match the recorded artifact.",
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc26.3/build/render-test-iris-on-alpha5"
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-manual-movement-iris-off",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "manual",
+          "kind": "iris_off_movement",
+          "profile": "manual-movement-iris-off",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-manual-movement-iris-off/COMPLETE.txt",
+          "completed_at": "2026-10-03T07:42:06.391191+00:00",
+          "artifact_relation": "predates_artifact",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": true
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-manual-movement-iris-off-alpha5",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "manual",
+          "kind": "iris_off_movement",
+          "profile": "manual-movement-iris-off",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-manual-movement-iris-off-alpha5/COMPLETE.txt",
+          "completed_at": "2026-10-04T06:13:12.884783+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-26.3-manual-movement-iris-off.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "run_record": "ports/mc26.3/build/render-test-manual-movement-iris-off-alpha5/run-record.json",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": true
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-manual-movement-iris-on",
+          "status": "failed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "manual",
+          "kind": "shader_movement",
+          "profile": "manual-movement-iris-on",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-manual-movement-iris-on/COMPLETE.txt",
+          "completed_at": "2026-10-03T07:43:35.111574+00:00",
+          "artifact_relation": "predates_artifact",
+          "shader_pack": "ComplementaryReimagined_r5.9.3.zip",
+          "shader_profile": "HIGH (+0 options changed by user)",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "minimum_clear_sky_fraction": 0.8522135416666666,
+          "pixel_check_applicable": false,
+          "visual_review_result": "ports/mc26.3/build/render-test-manual-movement-iris-on/visual-review-result.json",
+          "visual_review_matches_captures": true,
+          "visual_review_status": "failed",
+          "review_notes": "Primary agent inspected the manual Iris shader walking captures. Scenes 25 and 26 show incorrect alignment while bobbing and rebuilding chunks. This alpha3 run is historical and cannot establish the current release's manual shader rendering correctness.",
+          "failure": "Visual inspection rejected the rendering: Primary agent inspected the manual Iris shader walking captures. Scenes 25 and 26 show incorrect alignment while bobbing and rebuilding chunks. This alpha3 run is historical and cannot establish the current release's manual shader rendering correctness."
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha4",
+          "status": "failed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "manual",
+          "kind": "shader_movement",
+          "profile": "manual-movement-iris-on",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha4/COMPLETE.txt",
+          "completed_at": "2026-10-03T14:07:15.501442+00:00",
+          "artifact_relation": "predates_artifact",
+          "shader_pack": "ComplementaryReimagined_r5.9.3.zip",
+          "shader_profile": "HIGH (+0 options changed by user)",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "minimum_clear_sky_fraction": 0.6468098958333334,
+          "pixel_check_applicable": false,
+          "visual_review_result": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha4/visual-review-result.json",
+          "visual_review_matches_captures": true,
+          "visual_review_status": "failed",
+          "review_notes": "Primary agent inspected the four final captures. Scene 23 still view appears continuous, but scene 24 walking without bobbing exposes horizontal native sky bands; scene 25 walking with bobbing exposes a diagonal sky wedge; scene 26 walking with a chunk rebuild exposes native sky beneath the manual ceiling. Clean process exit does not establish correct rendering.",
+          "failure": "Visual inspection rejected the rendering: Primary agent inspected the four final captures. Scene 23 still view appears continuous, but scene 24 walking without bobbing exposes horizontal native sky bands; scene 25 walking with bobbing exposes a diagonal sky wedge; scene 26 walking with a chunk rebuild exposes native sky beneath the manual ceiling. Clean process exit does not establish correct rendering."
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha5",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": true,
+          "settings_mode": "manual",
+          "kind": "shader_movement",
+          "profile": "manual-movement-iris-on",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha5/COMPLETE.txt",
+          "completed_at": "2026-10-04T06:02:18.504080+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-26.3-manual-movement-iris-on.log",
+          "process_exit": "successful",
+          "shader_pack": "ComplementaryReimagined_r5.9.3.zip",
+          "shader_profile": "HIGH (+0 options changed by user)",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "run_record": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha5/run-record.json",
+          "proof": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha5/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "review_notes": "Primary agent and renderer agent independently inspected all four final alpha5 manual Iris-on PNGs on 2026-10-04. Scenes 23 still, 24 walking without view bobbing, 25 walking with view bobbing, and 26 walking with chunk rebuild all show continuous manual blue sky and a white Sun with intact walls. No diagonal wedge, horizontal bands, or native shader-pack sky leakage appears. The run exited cleanly with the verified Java 25 runtime and current release artifact hash.",
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha5",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": false
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-iris-off-alpha2",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "follow_world",
+          "kind": "iris_off_movement",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-iris-off-alpha2/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:14:30.423735+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/26x/263-movement-iris-off-alpha2.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": true
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-iris-off-alpha3",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": true,
+          "settings_mode": "follow_world",
+          "kind": "iris_off_movement",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-iris-off-alpha3/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:32:47.173234+00:00",
+          "artifact_relation": "different_sha256",
+          "run_log": ".tooling/compat/26x/263-movement-iris-off-alpha3.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "proof": "ports/mc26.3/build/render-test-movement-iris-off-alpha3/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "review_notes": "All four images show continuous sky. Actual walking crosses x=96 with bobbing off/on and terrain rebuilds. Each central sample is 100% clear sky. The alpha.3 run exited successfully.",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": true
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-iris-off-alpha5",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "follow_world",
+          "kind": "iris_off_movement",
+          "profile": "movement-iris-off",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-iris-off-alpha5/COMPLETE.txt",
+          "completed_at": "2026-10-04T06:11:41.888093+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-26.3-movement-iris-off.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "run_record": "ports/mc26.3/build/render-test-movement-iris-off-alpha5/run-record.json",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": true
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-iris-off-baseline",
+          "status": "failed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "follow_world",
+          "kind": "iris_off_movement",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-iris-off-baseline/COMPLETE.txt",
+          "completed_at": "2026-10-01T14:57:40.994918+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/26x/movement263-baseline.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "minimum_clear_sky_fraction": 0.8403862847222222,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": false,
+          "failure": "Movement capture contains fallback ceiling pixels"
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-iris-off-fixed",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "follow_world",
+          "kind": "iris_off_movement",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-iris-off-fixed/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:04:30.280430+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/26x/movement263-fixed.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": true
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-iris-on",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": true,
+          "settings_mode": "follow_world",
+          "kind": "shader_movement",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-iris-on/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:39:11.605873+00:00",
+          "artifact_relation": "different_sha256",
+          "run_log": ".tooling/compat/26x/263-movement-iris-on.log",
+          "process_exit": "successful",
+          "shader_pack": "ComplementaryReimagined_r5.9.3.zip",
+          "shader_profile": "HIGH (+0 options changed by user)",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "proof": "ports/mc26.3/build/render-test-movement-iris-on/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "review_notes": "All four live walking views retain Complementary Reimagined r5.9.3 sky and clouds without fallback tiles. Bobbing and terrain rebuilds pass visual inspection. The process exits successfully.",
+          "minimum_clear_sky_fraction": 0.3663194444444444,
+          "pixel_check_applicable": false
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-iris-on-alpha5",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "follow_world",
+          "kind": "shader_movement",
+          "profile": "movement-iris-on",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-iris-on-alpha5/COMPLETE.txt",
+          "completed_at": "2026-10-04T06:14:53.748093+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-26.3-movement-iris-on.log",
+          "process_exit": "successful",
+          "shader_pack": "ComplementaryReimagined_r5.9.3.zip",
+          "shader_profile": "HIGH (+0 options changed by user)",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "run_record": "ports/mc26.3/build/render-test-movement-iris-on-alpha5/run-record.json",
+          "minimum_clear_sky_fraction": 0.3657769097222222,
+          "pixel_check_applicable": false
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-resources",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": true,
+          "settings_mode": "follow_world",
+          "kind": "resource_movement",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-resources/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:41:09.679558+00:00",
+          "artifact_relation": "different_sha256",
+          "run_log": ".tooling/compat/26x/263-movement-resources.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window, file/sky-window-test.zip",
+          "proof": "ports/mc26.3/build/render-test-movement-resources/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "review_notes": "All four live walking views retain the pink/cyan replacement sun and continuous native sky, including bobbing and terrain rebuilds. The process exits successfully.",
+          "minimum_clear_sky_fraction": 0.0,
+          "pixel_check_applicable": false
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-resources-alpha5",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": false,
+          "settings_mode": "follow_world",
+          "kind": "resource_movement",
+          "profile": "movement-resources",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-resources-alpha5/COMPLETE.txt",
+          "completed_at": "2026-10-04T06:16:11.318620+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-26.3-movement-resources.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window, file/sky-window-test.zip",
+          "run_record": "ports/mc26.3/build/render-test-movement-resources-alpha5/run-record.json",
+          "minimum_clear_sky_fraction": 0.0,
+          "pixel_check_applicable": false
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-movement-vanilla",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": true,
+          "settings_mode": "follow_world",
+          "kind": "vanilla_movement",
+          "expected_captures": 4,
+          "completion": "ports/mc26.3/build/render-test-movement-vanilla/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:35:51.054191+00:00",
+          "artifact_relation": "different_sha256",
+          "run_log": ".tooling/compat/26x/263-movement-vanilla.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "proof": "ports/mc26.3/build/render-test-movement-vanilla/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "review_notes": "All four walking views are seamless. Bobbing and terrain rebuilds retain native sky. All central clear-sky samples are 100%, and the alpha.3 process exits successfully.",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": true
+        },
+        {
+          "directory": "ports/mc26.3/build/render-test-resources",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": false,
+          "settings_mode": "mixed",
+          "kind": "resource",
+          "expected_captures": 22,
+          "completion": "ports/mc26.3/build/render-test-resources/COMPLETE.txt",
+          "completed_at": "2026-09-30T15:25:43.336865+00:00",
+          "artifact_relation": "predates_artifact",
+          "effective_resource_packs": "vanilla, vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window, file/sky-window-test.zip"
+        }
+      ]
+    },
+    {
+      "minecraft": "26.2",
+      "java": 25,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/c7868781b30aaf24be0dac894c94a34e5d6df10d/26.2.json",
+      "project": "ports/mc26.2",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.161.0+26.2",
+        "iris": {
+          "version": "1.11.4+26.2-fabric",
+          "modrinth_version_id": "gxZWWnKH",
+          "source": "https://api.modrinth.com/v2/version/gxZWWnKH"
+        },
+        "sodium": {
+          "version": "mc26.2-0.9.2-fabric",
+          "modrinth_version_id": "xJZxADzI",
+          "source": "https://api.modrinth.com/v2/version/xJZxADzI"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc26.2/build/libs/sky-window-0.3.0-alpha.1+mc26.2.jar",
+        "expected_version": "0.3.0-alpha.1+mc26.2",
+        "status": "valid",
+        "sha256": "1beee9a575a0f277234333731f26779e8814336939a224303192511805f4ac1b",
+        "bytes": 74075,
+        "class_major_versions": [
+          69
+        ],
+        "java": 25,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc26.2",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "26.2",
+            "java": ">=25",
+            "fabric-api": ">=0.161.0+26.2"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/26x/manual-fixture-26.2.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": "ports/mc26.2/build/verification/server-gametest.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc26.2/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc26.2/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T06:56:15.057806+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/client-26.2.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc26.2/build/render-test/visual-review.md",
+          "review_notes": "# Visual review\n\nThe 22 PNG captures were visually inspected on 2026-10-01.\n\n- Live day, night, rain, thunder, native clouds, and room illumination were inspected.\n- The top and sides keep the ordinary block appearance.\n- The settings panel is readable; custom night, thunder, snow, and independent ceilings are visible.\n- Foreground red wool and the nearest stacked ceiling occlude the farther sky correctly.\n- Reset returns the ceiling to the live world sky.\n\nThis review covers stationary captures with the vanilla renderer. Movement and Iris with shaders disabled require separate regression checks."
+        },
+        {
+          "directory": "ports/mc26.2/build/render-test-movement-iris-off",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": true,
+          "settings_mode": "follow_world",
+          "kind": "iris_off_movement",
+          "expected_captures": 4,
+          "completion": "ports/mc26.2/build/render-test-movement-iris-off/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:07:31.998692+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/26x/movement-26.2.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric-advancement-api-v1, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "historical_visual_review": "ports/mc26.2/build/render-test-movement-iris-off/visual-review.md",
+          "review_notes": "# Movement visual review\n\nAll four scenario images were inspected. Standing, walking with bobbing off, walking with bobbing on, and walking during terrain rebuilds display continuous native sky without fallback tiles. Central clear-sky fraction is 100% in all four images. These captures follow the projection correction and precede the later index guard; they are historical evidence for the projection change.",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": true
+        }
+      ]
+    },
+    {
+      "minecraft": "26.1.2",
+      "java": 25,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/ee044d53f31fdcbfa31be3684ad321d44c81c3a5/26.1.2.json",
+      "project": "ports/mc26.1.2",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.155.3+26.1.2",
+        "iris": {
+          "version": "1.11.4+26.1-fabric",
+          "modrinth_version_id": "sZbVsl2Q",
+          "source": "https://api.modrinth.com/v2/version/sZbVsl2Q"
+        },
+        "sodium": {
+          "version": "mc26.1.2-0.9.2-fabric",
+          "modrinth_version_id": "tZQ3jqnf",
+          "source": "https://api.modrinth.com/v2/version/tZQ3jqnf"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc26.1.2/build/libs/sky-window-0.3.0-alpha.1+mc26.1.2.jar",
+        "expected_version": "0.3.0-alpha.1+mc26.1.2",
+        "status": "valid",
+        "sha256": "c5768741b596d837c22980dce817920bd50074765d686aa5dd6b370d94952d3f",
+        "bytes": 74093,
+        "class_major_versions": [
+          69
+        ],
+        "java": 25,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc26.1.2",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "26.1.2",
+            "java": ">=25",
+            "fabric-api": ">=0.155.3+26.1.2"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/26x/manual-fixture-26.1.2.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": ".tooling/compat/26x/index-build-26.1.2.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc26.1.2/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc26.1.2/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T14:19:37.166437+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/client-26.1.2.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc26.1.2/build/render-test/visual-review.md",
+          "review_notes": "# Visual review\n\nThe 22 PNG captures were visually inspected on 2026-10-01.\n\n- Live day, night, rain, thunder, native clouds, and room illumination were inspected.\n- The top and sides keep the ordinary block appearance.\n- The settings panel is readable; custom night, thunder, snow, and independent ceilings are visible.\n- Foreground red wool and the nearest stacked ceiling occlude the farther sky correctly.\n- Reset returns the ceiling to the live world sky.\n\nThis review covers stationary captures with the vanilla renderer. Movement and Iris with shaders disabled require separate regression checks."
+        },
+        {
+          "directory": "ports/mc26.1.2/build/render-test-movement-iris-off",
+          "status": "completed",
+          "captures": 4,
+          "visually_reviewed": true,
+          "settings_mode": "follow_world",
+          "kind": "iris_off_movement",
+          "expected_captures": 4,
+          "completion": "ports/mc26.1.2/build/render-test-movement-iris-off/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:09:02.938337+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/26x/movement-26.1.2.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-permission-api-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, sky_window, sodium",
+          "historical_visual_review": "ports/mc26.1.2/build/render-test-movement-iris-off/visual-review.md",
+          "review_notes": "# Movement visual review\n\nAll four scenario images were inspected. Standing, walking with bobbing off, walking with bobbing on, and walking during terrain rebuilds display continuous native sky without fallback tiles. Central clear-sky fraction is 100% in all four images. These captures follow the projection correction and precede the later index guard; they are historical evidence for the projection change.",
+          "minimum_clear_sky_fraction": 1.0,
+          "pixel_check_applicable": true,
+          "pixel_checks_passed": true
+        }
+      ]
+    },
+    {
+      "minecraft": "26.1.1",
+      "java": 25,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/5a42f7f729831da920768fc30db7f0b19b9eaa20/26.1.1.json",
+      "project": "ports/mc26.1.1",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.145.4+26.1.1",
+        "iris": {
+          "version": "1.10.9+mc26.1.1",
+          "modrinth_version_id": "MwcLS51S",
+          "source": "https://api.modrinth.com/v2/version/MwcLS51S"
+        },
+        "sodium": {
+          "version": "0.8.9+mc26.1.1",
+          "modrinth_version_id": "uGvVQBnw",
+          "source": "https://api.modrinth.com/v2/version/uGvVQBnw"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc26.1.1/build/libs/sky-window-0.3.0-alpha.1+mc26.1.1.jar",
+        "expected_version": "0.3.0-alpha.1+mc26.1.1",
+        "status": "valid",
+        "sha256": "b66222ba7ee39280c35193cedd7bbbd54e7e9d9915c54dcf370416d3969cdefa",
+        "bytes": 74093,
+        "class_major_versions": [
+          69
+        ],
+        "java": 25,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc26.1.1",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "26.1.1",
+            "java": ">=25",
+            "fabric-api": ">=0.145.4+26.1.1"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/26x/manual-fixture-26.1.1.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": ".tooling/compat/26x/index-build-26.1.1.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc26.1.1/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc26.1.1/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T14:22:34.775773+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/client-26.1.1.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc26.1.1/build/render-test/visual-review.md",
+          "review_notes": "# Visual review\n\nThe 22 PNG captures were visually inspected on 2026-10-01.\n\n- Live day, night, rain, thunder, native clouds, and room illumination were inspected.\n- The top and sides keep the ordinary block appearance.\n- The settings panel is readable; custom night, thunder, snow, and independent ceilings are visible.\n- Foreground red wool and the nearest stacked ceiling occlude the farther sky correctly.\n- Reset returns the ceiling to the live world sky.\n\nThis review covers stationary captures with the vanilla renderer. Movement and Iris with shaders disabled require separate regression checks."
+        }
+      ]
+    },
+    {
+      "minecraft": "26.1",
+      "java": 25,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/84d0ff7bd4428695691af5a178edae22c7c83d89/26.1.json",
+      "project": "ports/mc26.1",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.145.1+26.1",
+        "iris": {
+          "version": "1.10.8+mc26.1",
+          "modrinth_version_id": "Yi5E3d2l",
+          "source": "https://api.modrinth.com/v2/version/Yi5E3d2l"
+        },
+        "sodium": {
+          "version": "0.8.7+mc26.1",
+          "modrinth_version_id": "Amr4VcZo",
+          "source": "https://api.modrinth.com/v2/version/Amr4VcZo"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc26.1/build/libs/sky-window-0.3.0-alpha.1+mc26.1.jar",
+        "expected_version": "0.3.0-alpha.1+mc26.1",
+        "status": "valid",
+        "sha256": "5adc38b80f3af92410beb1c2c6e5984f2285c8f1e7f00f75b39de2d85628f5d7",
+        "bytes": 74091,
+        "class_major_versions": [
+          69
+        ],
+        "java": 25,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc26.1",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "26.1",
+            "java": ">=25",
+            "fabric-api": ">=0.145.1+26.1"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/26x/manual-fixture-26.1.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": "ports/mc26.1/build/verification/server-gametest.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc26.1/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc26.1/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T14:25:22.799953+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/client-26.1.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-getter-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-creative-tab-api-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-debug-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-key-mapping-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v3, fabric-menu-api-v1, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc26.1/build/render-test/visual-review.md",
+          "review_notes": "# Visual review\n\nThe 22 PNG captures were visually inspected on 2026-10-01.\n\n- Live day, night, rain, thunder, native clouds, and room illumination were inspected.\n- The top and sides keep the ordinary block appearance.\n- The settings panel is readable; custom night, thunder, snow, and independent ceilings are visible.\n- Foreground red wool and the nearest stacked ceiling occlude the farther sky correctly.\n- Reset returns the ceiling to the live world sky.\n\nThis review covers stationary captures with the vanilla renderer. Movement and Iris with shaders disabled require separate regression checks."
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.11",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/4f6bd9388f12e9d7adc2ded64acba66212d60521/1.21.11.json",
+      "project": "ports/mc1.21.11",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.141.6+1.21.11",
+        "iris": {
+          "version": "1.10.8+1.21.11-fabric",
+          "modrinth_version_id": "ka9PDlsN",
+          "source": "https://api.modrinth.com/v2/version/ka9PDlsN"
+        },
+        "sodium": {
+          "version": "mc1.21.11-0.8.14-fabric",
+          "modrinth_version_id": "rkdTcxoT",
+          "source": "https://api.modrinth.com/v2/version/rkdTcxoT"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.11/build/libs/sky-window-0.3.0-alpha.1+mc1.21.11.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.11",
+        "status": "valid",
+        "sha256": "5ae9e0ded4114894c3f5eaff38cb2fbb098009205fdd03a8b426d12b75c127d4",
+        "bytes": 67245,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.11",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "1.21.11",
+            "java": ">=21",
+            "fabric-api": ">=0.141.6+1.21.11"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/gui-1.21.11-static.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": ".tooling/compat/modern121/1.21.11-final-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.11/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.11/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-03T07:53:44.186169+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-1.21.11-static.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "run_record": "ports/mc1.21.11/build/render-test/run-record.json",
+          "historical_visual_review": "ports/mc1.21.11/build/render-test/visual-review.md",
+          "review_notes": "Reviewed 2026-10-03 by the primary agent using all22 final captures in contact-sheet.jpg. White vanilla sun and moving clouds are present by day; the overhead sun leaves at sunset; moon and stars appear at night. Rain and thunder darken distinctly, and actual room illumination differs between day and night. Opaque beams remain visible, top and side stay ordinary solid block faces, the settings panel is readable, custom thunder and snow are distinct, independent ceilings and nearest stacked windows show separate settings, and both reset scenes return to the live sky. No missing aperture or tiled fallback ceiling appears in these stationary captures. Walking and shader-on behavior require separate evidence. Current release association is recorded separately.",
+          "proof": "ports/mc1.21.11/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc1.21.11/build/render-test"
+        },
+        {
+          "directory": "ports/mc1.21.11/build/render-test-resources-static",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "resource",
+          "profile": "resource-static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.11/build/render-test-resources-static/COMPLETE.txt",
+          "completed_at": "2026-10-03T07:46:31.226744+00:00",
+          "artifact_relation": "matches_sha256",
+          "effective_resource_packs": "vanilla, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window, file/sky-window-test.zip",
+          "proof": "ports/mc1.21.11/build/render-test-resources-static/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "review_notes": "Reviewed all 22 resource-pack scenes: replacement pink/cyan sun remains visible in live and manual noon views, native and manual clouds remain continuous, live night and manual snow/thunder are distinct, foreground red wool and nearest ceilings occlude correctly, settings panel remains readable, and reset returns to live sky. The retained original client log loads file/sky-window-test.zip, names the original render-test output, captures all 22 images within the recorded run, saves all worlds and exits successfully under the current Java 21 runtime and release hash. The subsequent vanilla rerun log is not used.",
+          "provenance_matches": true,
+          "process_exit": "successful",
+          "original_output_directory": "ports/mc1.21.11/build/render-test",
+          "run_record": "ports/mc1.21.11/build/render-test-resources-static/run-record.json"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.10",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/a00569761f3e217e9a71424ff21ecdf467f5b835/1.21.10.json",
+      "project": "ports/mc1.21.10",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.138.4+1.21.10",
+        "iris": {
+          "version": "1.9.7+1.21.10-fabric",
+          "modrinth_version_id": "a98UkgML",
+          "source": "https://api.modrinth.com/v2/version/a98UkgML"
+        },
+        "sodium": {
+          "version": "mc1.21.10-0.7.3-fabric",
+          "modrinth_version_id": "sFfidWgd",
+          "source": "https://api.modrinth.com/v2/version/sFfidWgd"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.10/build/libs/sky-window-0.3.0-alpha.1+mc1.21.10.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.10",
+        "status": "valid",
+        "sha256": "b52d219744f9a9c169955b5113edb59b4744bddc1fa4ed0f52d29e08261b4e4d",
+        "bytes": 66948,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.10",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "1.21.10",
+            "java": ">=21",
+            "fabric-api": ">=0.138.4+1.21.10"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/gui-1.21.10-static.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": ".tooling/compat/modern121/1.21.10-final-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.10/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.10/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-03T07:49:20.694085+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-1.21.10-static.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "run_record": "ports/mc1.21.10/build/render-test/run-record.json",
+          "historical_visual_review": "ports/mc1.21.10/build/render-test/visual-review.md",
+          "review_notes": "Reviewed all22 static scenes: live day/night/rain/thunder, ordinary top/side faces, opaque foreground, room brightness, readable settings, manual weather, independent and nearest stacked ceilings, and reset; no fallback ceiling. Actual Java21 and clean client exit recorded by queue.",
+          "proof": "ports/mc1.21.10/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc1.21.10/build/render-test"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.9",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/5f4990c6189ca01b97c58996bec83ebcd879f0a6/1.21.9.json",
+      "project": "ports/mc1.21.9",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.134.1+1.21.9",
+        "iris": {
+          "version": "1.9.7+1.21.10-fabric",
+          "modrinth_version_id": "a98UkgML",
+          "source": "https://api.modrinth.com/v2/version/a98UkgML"
+        },
+        "sodium": {
+          "version": "mc1.21.10-0.7.3-fabric",
+          "modrinth_version_id": "sFfidWgd",
+          "source": "https://api.modrinth.com/v2/version/sFfidWgd"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.9/build/libs/sky-window-0.3.0-alpha.1+mc1.21.9.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.9",
+        "status": "valid",
+        "sha256": "f672cbd3078d9e3bd2ea12c1f95d04cdbedb5c5a997edcda838312e900e8b528",
+        "bytes": 66948,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.9",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "1.21.9",
+            "java": ">=21",
+            "fabric-api": ">=0.134.1+1.21.9"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/gui-1.21.9-static.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": ".tooling/compat/modern121/1.21.9-final-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.9/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.9/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-03T07:56:29.537688+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-1.21.9-static.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-resource-loader-v1, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "run_record": "ports/mc1.21.9/build/render-test/run-record.json",
+          "historical_visual_review": "ports/mc1.21.9/build/render-test/visual-review.md",
+          "review_notes": "Reviewed 2026-10-03 by the primary agent using all22 final captures in contact-sheet.jpg. White vanilla sun and moving clouds are present by day; the overhead sun leaves at sunset; moon and stars appear at night. Rain and thunder darken distinctly, and actual room illumination differs between day and night. Opaque beams remain visible, top and side stay ordinary solid block faces, the settings panel is readable, custom thunder and snow are distinct, independent ceilings and nearest stacked windows show separate settings, and both reset scenes return to the live sky. No missing aperture or tiled fallback ceiling appears in these stationary captures. Walking and shader-on behavior require separate evidence. Current release association is recorded separately.",
+          "proof": "ports/mc1.21.9/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc1.21.9/build/render-test"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.8",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/403dee3925f64c7138b72a5302130829cb588784/1.21.8.json",
+      "project": "ports/mc1.21.8",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.136.1+1.21.8",
+        "iris": {
+          "version": "1.9.6+1.21.8-fabric",
+          "modrinth_version_id": "Rhzf61g1",
+          "source": "https://api.modrinth.com/v2/version/Rhzf61g1"
+        },
+        "sodium": {
+          "version": "mc1.21.8-0.7.2-fabric",
+          "modrinth_version_id": "pJRT8Zxt",
+          "source": "https://api.modrinth.com/v2/version/pJRT8Zxt"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.8/build/libs/sky-window-0.3.0-alpha.1+mc1.21.8.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.8",
+        "status": "valid",
+        "sha256": "571c265ef7fbe6469af3ab0ef3a9bc27d6cac8cf1d4e9191cb7175101f43eef6",
+        "bytes": 68288,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.8",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "1.21.8",
+            "java": ">=21",
+            "fabric-api": ">=0.136.1+1.21.8"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/gui-1.21.8-static.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": ".tooling/compat/modern121/1.21.8-final-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.8/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.8/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-03T07:59:17.025690+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-1.21.8-static.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-serialization-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "run_record": "ports/mc1.21.8/build/render-test/run-record.json",
+          "historical_visual_review": "ports/mc1.21.8/build/render-test/visual-review.md",
+          "review_notes": "Reviewed 2026-10-03 by the primary agent using all22 final captures in contact-sheet.jpg. White vanilla sun and moving clouds are present by day; the overhead sun leaves at sunset; moon and stars appear at night. Rain and thunder darken distinctly, and actual room illumination differs between day and night. Opaque beams remain visible, top and side stay ordinary solid block faces, the settings panel is readable, custom thunder and snow are distinct, independent ceilings and nearest stacked windows show separate settings, and both reset scenes return to the live sky. No missing aperture or tiled fallback ceiling appears in these stationary captures. Walking and shader-on behavior require separate evidence. Current release association is recorded separately.",
+          "proof": "ports/mc1.21.8/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc1.21.8/build/render-test"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.7",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/0a6e46f9485369b13e18a81376ba5751a3bcaaba/1.21.7.json",
+      "project": "ports/mc1.21.7",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.129.0+1.21.7",
+        "iris": {
+          "version": "1.9.6+1.21.8-fabric",
+          "modrinth_version_id": "Rhzf61g1",
+          "source": "https://api.modrinth.com/v2/version/Rhzf61g1"
+        },
+        "sodium": {
+          "version": "mc1.21.8-0.7.2-fabric",
+          "modrinth_version_id": "pJRT8Zxt",
+          "source": "https://api.modrinth.com/v2/version/pJRT8Zxt"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.7/build/libs/sky-window-0.3.0-alpha.1+mc1.21.7.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.7",
+        "status": "valid",
+        "sha256": "8aa5603bcf7253eed22d1ccfbdc521fd75bdc261af9d64d131a988badb1e4ff2",
+        "bytes": 68288,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.7",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "1.21.7",
+            "java": ">=21",
+            "fabric-api": ">=0.129.0+1.21.7"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/gui-1.21.7-static.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": ".tooling/compat/modern121/1.21.7-final-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.7/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.7/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-03T14:04:52.240347+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-1.21.7-static.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "run_record": "ports/mc1.21.7/build/render-test/run-record.json",
+          "historical_visual_review": "ports/mc1.21.7/build/render-test/visual-review.md",
+          "review_notes": "Primary agent inspected all 22 final static captures on 2026-10-03. Day/cloud movement/sunset/night/rain/thunder, room lighting, underside occlusion, solid top and side, settings, manual and independent ceilings, nearest stacked windows, and reset views were reviewed. Walking and shader behavior are separate checks.",
+          "proof": "ports/mc1.21.7/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc1.21.7/build/render-test"
+        },
+        {
+          "directory": "ports/mc1.21.7/build/render-test-historical-20261003T140147Z",
+          "status": "missing",
+          "captures": 0,
+          "visually_reviewed": false,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.6",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/803d74fb7bf8f1e5cdcb387e411d0335721060da/1.21.6.json",
+      "project": "ports/mc1.21.6",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.128.2+1.21.6",
+        "iris": {
+          "version": "1.9.6+1.21.8-fabric",
+          "modrinth_version_id": "Rhzf61g1",
+          "source": "https://api.modrinth.com/v2/version/Rhzf61g1"
+        },
+        "sodium": {
+          "version": "mc1.21.8-0.7.2-fabric",
+          "modrinth_version_id": "pJRT8Zxt",
+          "source": "https://api.modrinth.com/v2/version/pJRT8Zxt"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.6/build/libs/sky-window-0.3.0-alpha.1+mc1.21.6.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.6",
+        "status": "valid",
+        "sha256": "ab4c670ec347dfa5b207bacd695796e341338036a12b836e7dd01f390b7dedb8",
+        "bytes": 68288,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.6",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "1.21.6",
+            "java": ">=21",
+            "fabric-api": ">=0.128.2+1.21.6"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/gui-1.21.6-static.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": ".tooling/compat/modern121/1.21.6-final-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.6/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.6/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-04T05:53:21.703919+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-1.21.6-static.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-client-gametest-api-v1, fabric-command-api-v2, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "run_record": "ports/mc1.21.6/build/render-test/run-record.json",
+          "historical_visual_review": "ports/mc1.21.6/build/render-test/visual-review.md",
+          "review_notes": "Primary agent inspected all 22 final stationary captures on 2026-10-04. Distinct live day/cloud motion/sunset/night/rain/thunder, opaque foreground, room lighting, solid top/side faces, readable settings, manual thunder/snow, independent and nearest stacked ceilings, and both resets pass image inspection. Walking and shader behavior remain separate checks.",
+          "proof": "ports/mc1.21.6/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc1.21.6/build/render-test"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.5",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/5b1e09e69f4f9c650ba11c36d8b27fd0153e4e82/1.21.5.json",
+      "project": "ports/mc1.21.5",
+      "dependencies": {
+        "loader": "0.19.5",
+        "fabric_api": "0.128.2+1.21.5",
+        "iris": {
+          "version": "1.8.11+1.21.5-fabric",
+          "modrinth_version_id": "U6evbjd0",
+          "source": "https://api.modrinth.com/v2/version/U6evbjd0"
+        },
+        "sodium": {
+          "version": "mc1.21.5-0.6.12-fabric",
+          "modrinth_version_id": "fVbw1C7i",
+          "source": "https://api.modrinth.com/v2/version/fVbw1C7i"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.5/build/libs/sky-window-0.3.0-alpha.1+mc1.21.5.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.5",
+        "status": "valid",
+        "sha256": "643f139c08aac71b84d2aa55045cdd2a7eb460a96025465af794ce25ef5b4a1b",
+        "bytes": 67804,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.5",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.19.5",
+            "minecraft": "1.21.5",
+            "java": ">=21",
+            "fabric-api": ">=0.128.2+1.21.5"
+          }
+        },
+        "validated_json_files": 13,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/modern121/1.21.5-final-guard-build.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 24,
+        "log": ".tooling/compat/modern121/1.21.5-final-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.5/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.5/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T06:50:42.262289+00:00",
+          "artifact_relation": "predates_artifact",
+          "run_log": ".tooling/compat/modern121/client-1.21.5.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-gametest-api-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc1.21.5/build/render-test/visual-review.md",
+          "review_notes": "Minecraft Java 1.21.5 vanilla visual review\n\nAll 22 captures completed. The settings screen has readable controls and buttons. Manual midnight thunder and snow appear only in Sky Windows while real-world measurements stay at daytime and clear weather. Independent windows show different skies. Red wool remains visible in front of a manual sky. Stacked live and manual windows resolve the nearer ceiling. Full server light is SKY 15 and BLOCK 0. The client log is preserved as client.log."
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.4",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/b547a27fc4d490dc10d62e40a42ace065162b644/1.21.4.json",
+      "project": "ports/mc1.21.4",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.119.4+1.21.4",
+        "iris": {
+          "version": "1.8.8+mc1.21.4",
+          "modrinth_version_id": "Ca054sTe",
+          "source": "https://api.modrinth.com/v2/version/Ca054sTe",
+          "jar_sha256": "70571b23d4de17ae380515fb4c9dadd82d96f7ec1b573553858a07bb80445da9",
+          "depends": {
+            "fabricloader": ">=0.12.3",
+            "minecraft": [
+              "1.21.x"
+            ],
+            "sodium": [
+              "0.6.x"
+            ]
+          },
+          "author_game_versions": [
+            "1.21.4"
+          ]
+        },
+        "sodium": {
+          "version": "0.6.13+mc1.21.4",
+          "modrinth_version_id": "c3YkZvne",
+          "source": "https://api.modrinth.com/v2/version/c3YkZvne",
+          "jar_sha256": "92b79623fc00f0f948005a0ae416cb42a51646f2423b4036e27e867e4001a47e",
+          "depends": {
+            "minecraft": [
+              "1.21.4"
+            ],
+            "fabricloader": ">=0.16.0",
+            "fabric-block-view-api-v2": "*",
+            "fabric-renderer-api-v1": "*",
+            "fabric-rendering-data-attachment-v1": "*",
+            "fabric-rendering-fluids-v1": ">=2.0.0",
+            "fabric-resource-loader-v0": "*"
+          },
+          "author_game_versions": [
+            "1.21.4"
+          ]
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.4/build/libs/sky-window-0.3.0-alpha.1+mc1.21.4.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.4",
+        "status": "valid",
+        "sha256": "82babfe776c0934e29e060ffceca8fb11b21bc82e38c183ebab20edd47115f67",
+        "bytes": 68757,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.4",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.21.4",
+            "java": ">=21",
+            "fabric-api": ">=0.119.4+1.21.4"
+          }
+        },
+        "validated_json_files": 15,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/mid/manual-profile-compile-1.21.4.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": "ports/mc1.21.4/build/verification/index-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.4/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.4/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T07:02:14.470427+00:00",
+          "artifact_relation": "different_sha256",
+          "run_log": ".tooling/compat/client-1.21.4.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-gametest-api-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc1.21.4/build/render-test/visual-review.md",
+          "review_notes": "Representative captures 01,04,12,13,14,15,17,18,20 inspected. Day/night, local snow and storm, controls, simultaneous skies, foreground occlusion, and nearest stacked-window selection are visually consistent. Production sources are unchanged since this run.",
+          "proof": "ports/mc1.21.4/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.3",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/bc2ae20dec0804f5d3f73943d6517ce8ceb36cc0/1.21.3.json",
+      "project": "ports/mc1.21.3",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.114.1+1.21.3",
+        "iris": {
+          "version": "1.8.1+mc1.21.3",
+          "modrinth_version_id": "xQYJAYTI",
+          "source": "https://api.modrinth.com/v2/version/xQYJAYTI",
+          "jar_sha256": "caf7f7aafb3388fae824c1d80da168ba53936ba3ab90b6ecc471c4f939cc40b4",
+          "depends": {
+            "fabricloader": ">=0.12.3",
+            "minecraft": [
+              "1.21.x"
+            ],
+            "sodium": [
+              "0.6.x"
+            ]
+          },
+          "author_game_versions": [
+            "1.21.3"
+          ]
+        },
+        "sodium": {
+          "version": "0.6.1+mc1.21.3",
+          "modrinth_version_id": "gXZfuKxx",
+          "source": "https://api.modrinth.com/v2/version/gXZfuKxx",
+          "jar_sha256": "91be70c06f5804dc537f9eb8118e4e5675b86d5ea2871246f9c10c6be6fcca9d",
+          "depends": {
+            "fabricloader": ">=0.12.0",
+            "fabric-block-view-api-v2": "*",
+            "fabric-renderer-api-v1": "*",
+            "fabric-rendering-data-attachment-v1": "*",
+            "fabric-rendering-fluids-v1": ">=2.0.0",
+            "fabric-resource-loader-v0": "*"
+          },
+          "author_game_versions": [
+            "1.21.2",
+            "1.21.3"
+          ]
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.3/build/libs/sky-window-0.3.0-alpha.1+mc1.21.3.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.3",
+        "status": "valid",
+        "sha256": "24e1d1e2ab70c16a124e61fb584ab01c94ea8bf447927075bc23816b76f58580",
+        "bytes": 68439,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.3",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.21.3",
+            "java": ">=21",
+            "fabric-api": ">=0.114.1+1.21.3"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/mid/manual-profile-compile-1.21.3.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": "ports/mc1.21.3/build/verification/index-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.3/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.3/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T14:34:12.852798+00:00",
+          "artifact_relation": "different_sha256",
+          "run_log": ".tooling/compat/client-1.21.3.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc1.21.3/build/render-test/visual-review.md",
+          "review_notes": "Representative captures 01,13,15,20 inspected. Live day, custom storm, simultaneous skies, and nearest stacked-window selection are visually consistent. Production sources are unchanged since this run.",
+          "proof": "ports/mc1.21.3/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.2",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/80e1de30a38523ed5ba094ae92efeebc28a81be8/1.21.2.json",
+      "project": "ports/mc1.21.2",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.106.1+1.21.2",
+        "iris": {
+          "version": "1.8.0+mc1.21.3",
+          "modrinth_version_id": "qyGMuaY6",
+          "source": "https://api.modrinth.com/v2/version/qyGMuaY6",
+          "jar_sha256": "a27630afcb019bc3bee06c26def53dafda46c9e20c681d63a631783498f169ba",
+          "depends": {
+            "fabricloader": ">=0.12.3",
+            "minecraft": [
+              "1.21.x"
+            ],
+            "sodium": [
+              "0.6.x"
+            ]
+          },
+          "author_game_versions": [
+            "1.21.2",
+            "1.21.3"
+          ]
+        },
+        "sodium": {
+          "version": "0.6.0+mc1.21.3",
+          "modrinth_version_id": "SzAjFUSx",
+          "source": "https://api.modrinth.com/v2/version/SzAjFUSx",
+          "jar_sha256": "98b89c7746f1d95fba2900ba95985778305a1e776936cf8fde9e07b1ec35aac9",
+          "depends": {
+            "fabricloader": ">=0.12.0",
+            "fabric-block-view-api-v2": "*",
+            "fabric-renderer-api-v1": "*",
+            "fabric-rendering-data-attachment-v1": "*",
+            "fabric-rendering-fluids-v1": ">=2.0.0",
+            "fabric-resource-loader-v0": "*"
+          },
+          "author_game_versions": [
+            "1.21.2",
+            "1.21.3"
+          ]
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.2/build/libs/sky-window-0.3.0-alpha.1+mc1.21.2.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.2",
+        "status": "valid",
+        "sha256": "b41f6fe049ca1ad0166cf658e92becf4368eecdcc218db728b87d6d40630949b",
+        "bytes": 68439,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.2",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.21.2",
+            "java": ">=21",
+            "fabric-api": ">=0.106.1+1.21.2"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/gui-1.21.2-static.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": ".tooling/compat/mid/index-build-1.21.2.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.2/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.2/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-04T05:56:31.450849+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-1.21.2-static.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "run_record": "ports/mc1.21.2/build/render-test/run-record.json",
+          "historical_visual_review": "ports/mc1.21.2/build/render-test/visual-review.md",
+          "review_notes": "Reviewed all 22 final stationary captures on 2026-10-04. Day/cloud motion/sunset/night/rain/thunder, room lighting, opaque foreground, solid top and side, readable settings, manual and disconnected ceilings, nearest stacked windows, and reset views pass image inspection. Walking and pack behavior are separate checks.",
+          "proof": "ports/mc1.21.2/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc1.21.2/build/render-test"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21.1",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/22a1966494dfa4eeb5ee778c8e6ed5b774839582/1.21.1.json",
+      "project": "ports/mc1.21.1",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.116.17+1.21.1",
+        "iris": {
+          "version": "1.8.8+mc1.21.1",
+          "modrinth_version_id": "zsoi0dso",
+          "source": "https://api.modrinth.com/v2/version/zsoi0dso",
+          "jar_sha256": "b5ad39a6cb113ca0a1765f06689f9f4b29ccd0c81247de90b06c42f5da1092f5",
+          "depends": {
+            "fabricloader": ">=0.12.3",
+            "minecraft": [
+              "1.21.x"
+            ],
+            "sodium": [
+              "0.6.x"
+            ]
+          },
+          "author_game_versions": [
+            "1.21",
+            "1.21.1"
+          ]
+        },
+        "sodium": {
+          "version": "0.6.13+mc1.21.1",
+          "modrinth_version_id": "u1OEbNKx",
+          "source": "https://api.modrinth.com/v2/version/u1OEbNKx",
+          "jar_sha256": "e04599514d88e41765f710eeba59e3814909833396bc11b977f48fc2e7e50353",
+          "depends": {
+            "minecraft": [
+              "1.21",
+              "1.21.1"
+            ],
+            "fabricloader": ">=0.16.0",
+            "fabric-block-view-api-v2": "*",
+            "fabric-renderer-api-v1": "*",
+            "fabric-rendering-data-attachment-v1": "*",
+            "fabric-rendering-fluids-v1": ">=2.0.0",
+            "fabric-resource-loader-v0": "*"
+          },
+          "author_game_versions": [
+            "1.21",
+            "1.21.1"
+          ]
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21.1/build/libs/sky-window-0.3.0-alpha.1+mc1.21.1.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21.1",
+        "status": "valid",
+        "sha256": "d6e57b91a1a9ceaff0b0c48cdde6b5481eb7ad7bdd0ff8610abe454c2591c81d",
+        "bytes": 68529,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21.1",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.21.1",
+            "java": ">=21",
+            "fabric-api": ">=0.116.17+1.21.1"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/mid/manual-profile-compile-1.21.1.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": ".tooling/compat/mid/index-build-1.21.1.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21.1/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21.1/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T06:29:27.109607+00:00",
+          "artifact_relation": "different_sha256",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc1.21.1/build/render-test/visual-review.md",
+          "review_notes": "All 22 captures inspected. Continuous live sky, weather, cloud movement, room lighting, settings, local snow, independent ceilings, foreground occlusion, stacked nearest selection, and reset to live are visually consistent. Production sources are unchanged since this run.",
+          "proof": "ports/mc1.21.1/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true
+        }
+      ]
+    },
+    {
+      "minecraft": "1.21",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/beaf2987935d1a33ffe90a61c812e444ca5a38cc/1.21.json",
+      "project": "ports/mc1.21",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.102.0+1.21",
+        "iris": {
+          "version": "1.8.8+mc1.21.1",
+          "modrinth_version_id": "zsoi0dso",
+          "source": "https://api.modrinth.com/v2/version/zsoi0dso",
+          "jar_sha256": "b5ad39a6cb113ca0a1765f06689f9f4b29ccd0c81247de90b06c42f5da1092f5",
+          "depends": {
+            "fabricloader": ">=0.12.3",
+            "minecraft": [
+              "1.21.x"
+            ],
+            "sodium": [
+              "0.6.x"
+            ]
+          },
+          "author_game_versions": [
+            "1.21",
+            "1.21.1"
+          ]
+        },
+        "sodium": {
+          "version": "0.6.13+mc1.21.1",
+          "modrinth_version_id": "u1OEbNKx",
+          "source": "https://api.modrinth.com/v2/version/u1OEbNKx",
+          "jar_sha256": "e04599514d88e41765f710eeba59e3814909833396bc11b977f48fc2e7e50353",
+          "depends": {
+            "minecraft": [
+              "1.21",
+              "1.21.1"
+            ],
+            "fabricloader": ">=0.16.0",
+            "fabric-block-view-api-v2": "*",
+            "fabric-renderer-api-v1": "*",
+            "fabric-rendering-data-attachment-v1": "*",
+            "fabric-rendering-fluids-v1": ">=2.0.0",
+            "fabric-resource-loader-v0": "*"
+          },
+          "author_game_versions": [
+            "1.21",
+            "1.21.1"
+          ]
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.21/build/libs/sky-window-0.3.0-alpha.1+mc1.21.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.21",
+        "status": "valid",
+        "sha256": "7aa9484f8279b97d570be2541741f70717c4f3f57bdff75e59337b67b0180584",
+        "bytes": 68526,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.21",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.21",
+            "java": ">=21",
+            "fabric-api": ">=0.102.0+1.21"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/gui-1.21-static.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": ".tooling/compat/mid/index-build-1.21.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.21/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "profile": "static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.21/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-04T05:59:41.597776+00:00",
+          "artifact_relation": "matches_sha256",
+          "run_log": ".tooling/compat/legacy/gui-1.21-static.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "run_record": "ports/mc1.21/build/render-test/run-record.json",
+          "historical_visual_review": "ports/mc1.21/build/render-test/visual-review.md",
+          "review_notes": "Reviewed all 22 final stationary captures on 2026-10-04. Live day/cloud motion/sunset/night/rain/thunder, room brightness, foreground occlusion, solid top/side faces, readable settings, manual weather and disconnected ceilings, nearest stacked ceiling, and resets pass visual review. Walking and pack checks are separate.",
+          "proof": "ports/mc1.21/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true,
+          "provenance_matches": true,
+          "original_output_directory": "ports/mc1.21/build/render-test"
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20.6",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/84c5b02d36a9be4560597687f9e2d19d69fada5d/1.20.6.json",
+      "project": "ports/mc1.20.6",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.100.8+1.20.6",
+        "iris": {
+          "version": "1.7.2+mc1.20.6",
+          "modrinth_version_id": "1bvcmYOc",
+          "source": "https://api.modrinth.com/v2/version/1bvcmYOc",
+          "jar_sha256": "87d1c24c581ef6c221e9ceba700db806d2ae5f309e5ae152065e6434efedd1ec",
+          "depends": {
+            "fabricloader": ">=0.12.3",
+            "minecraft": [
+              "1.20.5",
+              "1.20.6"
+            ],
+            "sodium": [
+              "0.5.9",
+              "0.5.11"
+            ]
+          },
+          "author_game_versions": [
+            "1.20.5",
+            "1.20.6"
+          ]
+        },
+        "sodium": {
+          "version": "0.5.11+mc1.20.6",
+          "modrinth_version_id": "OwLQelEI",
+          "source": "https://api.modrinth.com/v2/version/OwLQelEI",
+          "jar_sha256": "6f05cf6944dfd98ac8c4a3daaa53e2fa58d3df84e4ee673bcd3bf64fddb592a4",
+          "depends": {
+            "minecraft": "1.20.6",
+            "fabricloader": ">=0.12.0",
+            "fabric-rendering-data-attachment-v1": ">=0.1",
+            "fabric-rendering-fluids-v1": ">=0.1"
+          },
+          "author_game_versions": [
+            "1.20.6"
+          ]
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.20.6/build/libs/sky-window-0.3.0-alpha.1+mc1.20.6.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.20.6",
+        "status": "valid",
+        "sha256": "cef30fbf5b93812da0b99cc9263a33d149b0fdab1f4a6a287d2cab92bae682f4",
+        "bytes": 68519,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.20.6",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.20.6",
+            "java": ">=21",
+            "fabric-api": ">=0.100.8+1.20.6"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/mid/manual-profile-compile-1.20.6.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": "ports/mc1.20.6/build/verification/index-guard-build.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": []
+    },
+    {
+      "minecraft": "1.20.5",
+      "java": 21,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/2b95c082b76616fcf6e2aa9fe443a45c15ccb435/1.20.5.json",
+      "project": "ports/mc1.20.5",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.97.8+1.20.5",
+        "iris": {
+          "version": "1.7.0+mc1.20.5",
+          "modrinth_version_id": "JjUWi3Lj",
+          "source": "https://api.modrinth.com/v2/version/JjUWi3Lj",
+          "jar_sha256": "5288834e8f7e28c2b925dd91e29beabda18a03f679d8d12a5205d18b3e6ef47c",
+          "depends": {
+            "minecraft": "1.20.5",
+            "fabricloader": ">=0.12.3"
+          },
+          "author_game_versions": [
+            "1.20.5"
+          ]
+        },
+        "sodium": {
+          "version": "0.5.8+mc1.20.6",
+          "modrinth_version_id": "IZskON6d",
+          "source": "https://api.modrinth.com/v2/version/IZskON6d",
+          "jar_sha256": "0bd68ba097f2f79f0560514f4af55888d7726784ffab3b5f93457d074bf9e358",
+          "depends": {
+            "minecraft": [
+              "1.20.5",
+              "1.20.6"
+            ],
+            "fabricloader": ">=0.12.0",
+            "fabric-rendering-data-attachment-v1": ">=0.1",
+            "fabric-rendering-fluids-v1": ">=0.1"
+          },
+          "author_game_versions": [
+            "1.20.5",
+            "1.20.6"
+          ]
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.20.5/build/libs/sky-window-0.3.0-alpha.1+mc1.20.5.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.20.5",
+        "status": "valid",
+        "sha256": "918b110e10ee0b1414bdba99e398c50089514440c52093030ade3b743a5509b3",
+        "bytes": 68519,
+        "class_major_versions": [
+          65
+        ],
+        "java": 21,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.20.5",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.20.5",
+            "java": ">=21",
+            "fabric-api": ">=0.97.8+1.20.5"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/mid/manual-profile-compile-1.20.5.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": ".tooling/compat/mid/index-build-1.20.5.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.20.5/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.20.5/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T14:31:15.666888+00:00",
+          "artifact_relation": "different_sha256",
+          "run_log": ".tooling/compat/client-1.20.5.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-models-v0, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc1.20.5/build/render-test/visual-review.md",
+          "review_notes": "Representative captures 01,13,15,20 inspected. Live day, custom storm, simultaneous skies, and nearest stacked-window selection are visually consistent. Production sources are unchanged since this run.",
+          "proof": "ports/mc1.20.5/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": true
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20.4",
+      "java": 17,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/bff1278922bca138b7722385a81366f3077abffa/1.20.4.json",
+      "project": "ports/mc1.20.4",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.97.3+1.20.4",
+        "iris": {
+          "version": "1.7.2+1.20.4",
+          "modrinth_version_id": "hq98tuSS",
+          "source": "https://api.modrinth.com/v2/version/hq98tuSS"
+        },
+        "sodium": {
+          "version": "mc1.20.4-0.5.8",
+          "modrinth_version_id": "4GyXKCLd",
+          "source": "https://api.modrinth.com/v2/version/4GyXKCLd"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.20.4/build/libs/sky-window-0.3.0-alpha.1+mc1.20.4.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.20.4",
+        "status": "valid",
+        "sha256": "6701b54f52e355d756020e1d9f7f052eba429b99596e2db22ad4aa5e3e526feb",
+        "bytes": 68016,
+        "class_major_versions": [
+          61
+        ],
+        "java": 17,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.20.4",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.20.4",
+            "java": ">=17",
+            "fabric-api": ">=0.97.3+1.20.4"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/guard-build-1.20.4-java17.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": ".tooling/compat/legacy/guard-build-1.20.4-java17.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.20.4/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.20.4/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T14:28:21.672640+00:00",
+          "artifact_relation": "stale_captures",
+          "run_log": ".tooling/compat/client-1.20.4.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-containers-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-events-lifecycle-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-mining-level-api-v1, fabric-model-loading-api-v1, fabric-models-v0, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, sky_window",
+          "historical_visual_review": "ports/mc1.20.4/build/render-test/visual-review.md",
+          "review_notes": "Reviewed all 22 static images and lighting measurements. Historical run before the synchronized window-index guard; current-build movement and clean shutdown remain separate.",
+          "proof": "ports/mc1.20.4/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": false
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20.3",
+      "java": 17,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/0fe5e3bb3fe9701374fecd6c8eda027b876565ec/1.20.3.json",
+      "project": "ports/mc1.20.3",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.91.1+1.20.3",
+        "iris": {
+          "version": "1.7.2+1.20.4",
+          "modrinth_version_id": "hq98tuSS",
+          "source": "https://api.modrinth.com/v2/version/hq98tuSS"
+        },
+        "sodium": {
+          "version": "mc1.20.4-0.5.8",
+          "modrinth_version_id": "4GyXKCLd",
+          "source": "https://api.modrinth.com/v2/version/4GyXKCLd"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.20.3/build/libs/sky-window-0.3.0-alpha.1+mc1.20.3.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.20.3",
+        "status": "valid",
+        "sha256": "4d8425ab0ad04961d52e725122b999abb8ccee624f50b3f98d7cab846c51b429",
+        "bytes": 68014,
+        "class_major_versions": [
+          61
+        ],
+        "java": 17,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.20.3",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.20.3",
+            "java": ">=17",
+            "fabric-api": ">=0.91.1+1.20.3"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": ".tooling/compat/legacy/guard-build-1.20.3-java17.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": ".tooling/compat/legacy/guard-build-1.20.3-java17.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.20.3/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.20.3/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T14:37:45.555251+00:00",
+          "artifact_relation": "stale_captures",
+          "run_log": ".tooling/compat/client-1.20.3.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric (fabric-commands-v0, fabric-item-api-v1, fabric-particles-v1, fabric-mining-level-api-v1, fabric-resource-loader-v0, fabric-screen-handler-api-v1, fabric-client-tags-api-v1, fabric-containers-v0, fabric-sound-api-v1, fabric-models-v0, fabric-entity-events-v1, fabric-events-lifecycle-v0, fabric-object-builder-api-v1, fabric-events-interaction-v0, fabric-block-view-api-v2, fabric-key-binding-api-v1, fabric-renderer-indigo, fabric-api, fabric-dimensions-v1, fabric-biome-api-v1, fabric-gametest-api-v1, fabric-transfer-api-v1, fabric-message-api-v1, fabric-rendering-fluids-v1, fabric-blockrenderlayer-v1, fabric-api-base, fabric-crash-report-info-v1, fabric-rendering-v0, fabric-block-api-v1, fabric-lifecycle-events-v1, fabricloader, fabric-model-loading-api-v1, fabric-resource-conditions-api-v1, fabric-keybindings-v0, fabric-data-generation-api-v1, fabric-rendering-v1, fabric-recipe-api-v1, fabric-loot-api-v2, fabric-game-rule-api-v1, fabric-screen-api-v1, fabric-transitive-access-wideners-v1, fabric-renderer-api-v1, fabric-command-api-v2, fabric-item-group-api-v1, fabric-convention-tags-v1, fabric-registry-sync-v0, fabric-command-api-v1, fabric-api-lookup-api-v1, fabric-networking-api-v1, fabric-rendering-data-attachment-v1, sky_window, fabric-renderer-registries-v1, fabric-content-registries-v0)",
+          "historical_visual_review": "ports/mc1.20.3/build/render-test/visual-review.md",
+          "review_notes": "Reviewed all 22 static images and lighting measurements. Historical run before the synchronized window-index guard; current-build movement and clean shutdown remain separate.",
+          "proof": "ports/mc1.20.3/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": false
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20.2",
+      "java": 17,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/fbdf078829aed78fd2ef22a53470aa7e37f74e5c/1.20.2.json",
+      "project": "ports/mc1.20.2",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.91.6+1.20.2",
+        "iris": {
+          "version": "1.6.14+1.20.2",
+          "modrinth_version_id": "Cjwm9s3i",
+          "source": "https://api.modrinth.com/v2/version/Cjwm9s3i"
+        },
+        "sodium": {
+          "version": "mc1.20.2-0.5.5",
+          "modrinth_version_id": "pmgeU5yX",
+          "source": "https://api.modrinth.com/v2/version/pmgeU5yX"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.20.2/build/libs/sky-window-0.3.0-alpha.1+mc1.20.2.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.20.2",
+        "status": "valid",
+        "sha256": "bfe34f9a6ec705931553ece227c4576d89c565de6cef0974f258113f336a663e",
+        "bytes": 67652,
+        "class_major_versions": [
+          61
+        ],
+        "java": 17,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.20.2",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.20.2",
+            "java": ">=17",
+            "fabric-api": ">=0.91.6+1.20.2"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": "ports/mc1.20.2/build/verification/server-gametest.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": "ports/mc1.20.2/build/verification/server-gametest.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.20.2/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.20.2/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T14:41:00.901531+00:00",
+          "artifact_relation": "stale_captures",
+          "run_log": ".tooling/compat/client-1.20.2.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric (fabric-containers-v0, fabric-content-registries-v0, fabric-block-view-api-v2, fabric-item-api-v1, fabric-mining-level-api-v1, fabric-commands-v0, fabric-lifecycle-events-v1, fabric-crash-report-info-v1, fabric-rendering-v1, fabric-block-api-v1, fabric-model-loading-api-v1, fabric-object-builder-api-v1, fabric-screen-handler-api-v1, fabric-transitive-access-wideners-v1, fabric-api-base, fabric-networking-api-v1, fabric-registry-sync-v0, fabric-key-binding-api-v1, fabric-api, fabric-item-group-api-v1, fabric-screen-api-v1, fabric-message-api-v1, fabric-renderer-indigo, fabric-models-v0, fabric-particles-v1, fabric-rendering-v0, fabric-game-rule-api-v1, fabric-convention-tags-v1, fabric-dimensions-v1, fabric-keybindings-v0, fabric-recipe-api-v1, fabric-renderer-api-v1, fabric-data-generation-api-v1, fabric-resource-conditions-api-v1, fabric-sound-api-v1, fabric-command-api-v1, fabric-gametest-api-v1, fabric-loot-api-v2, fabric-entity-events-v1, fabric-resource-loader-v0, fabric-biome-api-v1, fabric-api-lookup-api-v1, fabric-rendering-fluids-v1, fabric-blockrenderlayer-v1, fabric-command-api-v2, fabric-renderer-registries-v1, sky_window, fabricloader, fabric-events-lifecycle-v0, fabric-events-interaction-v0, fabric-transfer-api-v1, fabric-rendering-data-attachment-v1, fabric-client-tags-api-v1)",
+          "historical_visual_review": "ports/mc1.20.2/build/render-test/visual-review.md",
+          "review_notes": "Reviewed all 22 static images and lighting measurements. Historical run before the synchronized window-index guard; current-build movement and clean shutdown remain separate.",
+          "proof": "ports/mc1.20.2/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": false
+        }
+      ]
+    },
+    {
+      "minecraft": "1.20.1",
+      "java": 17,
+      "mojang_metadata": "https://piston-meta.mojang.com/v1/packages/c0a00f47b3dae01d83e21be9a646c9232379d9ab/1.20.1.json",
+      "project": "ports/mc1.20.1",
+      "dependencies": {
+        "loader": "0.16.14",
+        "fabric_api": "0.92.12+1.20.1",
+        "iris": {
+          "version": "1.7.6+1.20.1",
+          "modrinth_version_id": "s5eFLITc",
+          "source": "https://api.modrinth.com/v2/version/s5eFLITc"
+        },
+        "sodium": {
+          "version": "mc1.20.1-0.5.11",
+          "modrinth_version_id": "ygf8cVZg",
+          "source": "https://api.modrinth.com/v2/version/ygf8cVZg"
+        }
+      },
+      "artifact": {
+        "path": "ports/mc1.20.1/build/libs/sky-window-0.3.0-alpha.1+mc1.20.1.jar",
+        "expected_version": "0.3.0-alpha.1+mc1.20.1",
+        "status": "valid",
+        "sha256": "a8b798a7bb3103cfc9d9add20626cf281fa4f1e8964b648392c49b768f888a89",
+        "bytes": 67663,
+        "class_major_versions": [
+          61
+        ],
+        "java": 17,
+        "metadata": {
+          "schemaVersion": 1,
+          "id": "sky_window",
+          "version": "0.3.0-alpha.1+mc1.20.1",
+          "name": "Sky Window",
+          "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+          "authors": [
+            "Sky Window contributors"
+          ],
+          "license": "MIT",
+          "environment": "*",
+          "entrypoints": {
+            "main": [
+              "dev.skylight.SkylightMod"
+            ],
+            "client": [
+              "dev.skylight.client.SkylightClient"
+            ]
+          },
+          "mixins": [
+            "sky_window.mixins.json",
+            {
+              "config": "sky_window.client.mixins.json",
+              "environment": "client"
+            }
+          ],
+          "depends": {
+            "fabricloader": ">=0.16.14",
+            "minecraft": "1.20.1",
+            "java": ">=17",
+            "fabric-api": ">=0.92.12+1.20.1"
+          }
+        },
+        "validated_json_files": 14,
+        "failures": []
+      },
+      "build": {
+        "status": "passed",
+        "log": "ports/mc1.20.1/build/verification/server-gametest.log"
+      },
+      "server_tests": {
+        "status": "passed",
+        "required_tests": 23,
+        "log": "ports/mc1.20.1/build/verification/server-gametest.log",
+        "artifact_binding": "not_recorded"
+      },
+      "captures": [
+        {
+          "directory": "ports/mc1.20.1/build/render-test",
+          "status": "completed",
+          "captures": 22,
+          "visually_reviewed": true,
+          "settings_mode": "mixed",
+          "kind": "vanilla_static",
+          "expected_captures": 22,
+          "completion": "ports/mc1.20.1/build/render-test/COMPLETE.txt",
+          "completed_at": "2026-10-01T15:27:55.524093+00:00",
+          "artifact_relation": "stale_captures",
+          "run_log": ".tooling/compat/client-1.20.1.log",
+          "process_exit": "successful",
+          "effective_resource_packs": "vanilla, fabric (fabric-loot-tables-v1, fabric-sound-api-v1, fabric-entity-events-v1, fabric-model-loading-api-v1, fabric-data-generation-api-v1, fabric-rendering-v0, fabric-message-api-v1, fabric-rendering-data-attachment-v1, fabric-renderer-indigo, fabric-transitive-access-wideners-v1, fabric-events-lifecycle-v0, fabric-lifecycle-events-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-data-attachment-api-v1, fabric-resource-loader-v0, fabric-block-api-v1, fabric-content-registries-v0, fabric-commands-v0, fabric-screen-api-v1, fabric-gametest-api-v1, fabric-recipe-api-v1, fabric-crash-report-info-v1, fabric-transfer-api-v1, fabric-command-api-v1, fabric-events-interaction-v0, fabric-screen-handler-api-v1, fabric-item-api-v1, fabric-rendering-v1, fabric-game-rule-api-v1, fabric-client-tags-api-v1, fabric-api-base, fabric-key-binding-api-v1, fabric-models-v0, fabric-api-lookup-api-v1, fabric-tag-api-v1, fabric-rendering-fluids-v1, fabric-particles-v1, fabric-biome-api-v1, fabric-renderer-registries-v1, fabric-object-builder-api-v1, fabric-api, fabric-registry-sync-v0, fabric-convention-tags-v1, fabric-mining-level-api-v1, fabric-networking-v0, fabric-keybindings-v0, fabric-containers-v0, fabric-renderer-api-v1, fabric-item-group-api-v1, fabric-command-api-v2, fabric-loot-api-v2, fabric-dimensions-v1, sky_window, fabricloader, fabric-resource-conditions-api-v1, fabric-networking-api-v1)",
+          "historical_visual_review": "ports/mc1.20.1/build/render-test/visual-review.md",
+          "review_notes": "Reviewed all 22 static images and lighting measurements. Historical run before the synchronized window-index guard; current-build movement and clean shutdown remain separate.",
+          "proof": "ports/mc1.20.1/build/render-test/compatibility-proof.json",
+          "proof_matches_captures": false
+        }
+      ]
+    }
+  ]
+}

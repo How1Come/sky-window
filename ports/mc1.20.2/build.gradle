@@ -1,0 +1,188 @@
+plugins {
+    id 'fabric-loom' version '1.10.5'
+    id 'maven-publish'
+}
+
+def movementSmoke = providers.gradleProperty('movementSmoke').isPresent() || providers.gradleProperty('manualMovementSmoke').isPresent()
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    if (providers.gradleProperty("legacyMirror").isPresent()) {
+        exclusiveContent {
+            forRepository { maven { url = uri("../../.tooling/compat/legacy/maven") } }
+            filter { includeGroup "net.fabricmc.fabric-api"; includeModule "net.fabricmc", "fabric-loader" }
+        }
+    }
+    mavenCentral()
+    maven {
+        url = 'https://api.modrinth.com/maven'
+        content { includeGroup 'maven.modrinth' }
+    }
+}
+
+sourceSets {
+    clientTest
+}
+
+loom {
+    splitEnvironmentSourceSets()
+    mods {
+        sky_window {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+        sky_window_client_test {
+            sourceSet sourceSets.clientTest
+        }
+    }
+    runs {
+        clientSmoke {
+            client()
+            source(sourceSets.clientTest)
+            runDir movementSmoke ? 'run/client-smoke-movement'
+                    : providers.gradleProperty('irisDisabledSmoke').isPresent() ? 'run/client-smoke-iris-off' : 'run/client-smoke'
+            property 'sky_window.smoke.movement', movementSmoke.toString()
+            property 'sky_window.smoke.manualMovement', providers.gradleProperty('manualMovementSmoke').isPresent().toString()
+            property 'sky_window.smoke.assertMovement', (!providers.gradleProperty('irisSmoke').isPresent()
+                    && !providers.gradleProperty('resourceSmoke').isPresent()
+                    && !providers.gradleProperty('skipMovementAssertion').isPresent()).toString()
+            property 'sky_window.smoke.output', file(providers.gradleProperty('smokeOutput').getOrElse(
+                    movementSmoke
+                    ? providers.gradleProperty('irisDisabledSmoke').isPresent() ? 'build/render-test-movement-iris-off'
+                    : providers.gradleProperty('irisSmoke').isPresent() ? 'build/render-test-movement-iris-on'
+                    : providers.gradleProperty('resourceSmoke').isPresent() ? 'build/render-test-movement-resources'
+                    : 'build/render-test-movement'
+                    : providers.gradleProperty('irisDisabledSmoke').isPresent() ? 'build/render-test-iris-off'
+                    : providers.gradleProperty('irisSmoke').isPresent() ? 'build/render-test-iris'
+                    : providers.gradleProperty('resourceSmoke').isPresent() ? 'build/render-test-resources'
+                    : 'build/render-test')).absolutePath
+            programArgs '--width', '1280', '--height', '720'
+        }
+    }
+}
+
+sourceSets.clientTest {
+    compileClasspath += sourceSets.main.output + sourceSets.client.output + sourceSets.client.compileClasspath
+    runtimeClasspath += output + compileClasspath + sourceSets.client.runtimeClasspath
+}
+
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = 'sky_window_gametest'
+        enableGameTests = true
+        enableClientGameTests = false
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    if (providers.gradleProperty('irisSmoke').isPresent() || providers.gradleProperty('irisDisabledSmoke').isPresent()) {
+        if (providers.gradleProperty('legacySmokeFiles').isPresent()) {
+            modLocalRuntime files('../../.tooling/compat/legacy/iris-mc1.20.2-1.6.14.jar', '../../.tooling/compat/legacy/sodium-fabric-mc1.20.2-0.5.5.jar')
+            runtimeOnly fileTree('../../.tooling/compat/legacy/iris-libs/1.20.2') { include '*.jar' }
+        } else {
+            modLocalRuntime "maven.modrinth:iris:${project.iris_version_id}"
+            modLocalRuntime "maven.modrinth:sodium:${project.sodium_version_id}"
+            runtimeOnly 'org.anarres:jcpp:1.4.14'
+            runtimeOnly 'io.github.douira:glsl-transformer:2.0.0-pre13'
+            runtimeOnly 'org.antlr:antlr4-runtime:4.11.1'
+        }
+    }
+    testImplementation platform('org.junit:junit-bom:5.12.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand 'version': inputs.properties.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    from('LICENSE') {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}
+
+tasks.named('runClientSmoke') {
+    doFirst {
+        boolean movement = movementSmoke
+        boolean irisOff = providers.gradleProperty('irisDisabledSmoke').isPresent()
+        boolean irisOn = providers.gradleProperty('irisSmoke').isPresent()
+        if (irisOff && irisOn) {
+            throw new GradleException('Use either irisSmoke or irisDisabledSmoke for a test run')
+        }
+        if (movement || irisOff) {
+            def instance = file(movement ? 'run/client-smoke-movement' : 'run/client-smoke-iris-off')
+            def config = new File(instance, 'config/iris.properties')
+            config.parentFile.mkdirs()
+            if (irisOn) {
+                def sourcePacks = file('run/client-smoke/shaderpacks')
+                def settings = new Properties()
+                def sourceConfig = file('run/client-smoke/config/iris.properties')
+                if (sourceConfig.isFile()) {
+                    sourceConfig.withInputStream { settings.load(it) }
+                }
+                String shader = providers.gradleProperty('smokeShaderPack').getOrElse(settings.getProperty('shaderPack', ''))
+                if (!shader) {
+                    def packs = sourcePacks.listFiles()?.findAll { it.isDirectory() || it.name.endsWith('.zip') }
+                    if (packs?.size() == 1) {
+                        shader = packs[0].name
+                    }
+                }
+                if (!shader || !new File(sourcePacks, shader).exists()) {
+                    throw new GradleException('Install a shader pack in run/client-smoke/shaderpacks and select it with smokeShaderPack')
+                }
+                copy {
+                    from sourcePacks
+                    into new File(instance, 'shaderpacks')
+                }
+                config.text = 'enableShaders=true\nshaderPack=' + shader + '\n'
+            } else {
+                config.text = 'enableShaders=false\nshaderPack=\n'
+            }
+            def options = new File(instance, 'options.txt')
+            def lines = options.exists() ? options.readLines().findAll { !it.startsWith('resourcePacks:') } : []
+            if (providers.gradleProperty('resourceSmoke').isPresent()) {
+                def pack = file('run/client-smoke/resourcepacks/sky-window-test.zip')
+                if (!pack.isFile()) {
+                    throw new GradleException('Generate the resource test pack with python3 scripts/create-sky-test-pack.py')
+                }
+                copy {
+                    from pack
+                    into new File(instance, 'resourcepacks')
+                }
+                lines.add('resourcePacks:["vanilla","fabric","file/sky-window-test.zip"]')
+            } else {
+                lines.add('resourcePacks:["vanilla","fabric"]')
+            }
+            options.text = lines.join('\n') + '\n'
+        }
+    }
+}

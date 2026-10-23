@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "sky_window_client_test",
+  "version": "1.0.0",
+  "name": "Sky Window Render Smoke Test",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.skylight.test.SkyWindowClientSmoke"]
+  },
+  "depends": {
+    "sky_window": "*",
+    "fabric-lifecycle-events-v1": "*"
+  }
+}

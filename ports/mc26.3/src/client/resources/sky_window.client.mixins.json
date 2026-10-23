@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "dev.skylight.mixin.client",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "MinecraftClientMixin",
+    "GameRendererMixin",
+    "LevelRendererMixin",
+    "IrisRenderingPipelineMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "sky_window",
+  "version": "${version}",
+  "name": "Sky Window",
+  "description": "Seamless ceiling windows onto the live sky, with real skylight underground.",
+  "authors": [
+    "How1Come"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.skylight.SkylightMod"
+    ],
+    "client": [
+      "dev.skylight.client.SkylightClient"
+    ]
+  },
+  "mixins": [
+    "sky_window.mixins.json",
+    {
+      "config": "sky_window.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "1.21.5",
+    "java": ">=21",
+    "fabric-api": ">=0.128.2+1.21.5"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "sky_window_gametest",
+  "version": "1.0.0",
+  "name": "Sky Window Game Tests",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-gametest": ["dev.skylight.test.SkylightGameTests", "dev.skylight.test.SkySettingsGameTests"]
+  },
+  "depends": {
+    "sky_window": "*",
+    "fabric-gametest-api-v1": "*"
+  }
+}

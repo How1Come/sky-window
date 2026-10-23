@@ -1,0 +1,23 @@
+Sky Window render smoke test
+01-day time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0
+02-cloud-motion time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0
+03-sunset time=12000 rain=0.0 thunder=0.0 sky_light=15 block_light=0
+04-night time=18000 rain=0.0 thunder=0.0 sky_light=15 block_light=0
+05-rain time=6000 rain=1.0 thunder=0.0 sky_light=15 block_light=0
+06-thunder time=6000 rain=1.0 thunder=1.0 sky_light=15 block_light=0
+07-foreground time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0
+08-room-day time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0
+09-room-night time=18000 rain=0.0 thunder=0.0 sky_light=15 block_light=0
+10-top time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0
+11-side time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0
+12-settings-panel time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=true, time=6000, weather=CLEAR]
+13-custom-night-thunder time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=false, time=18000, weather=THUNDER]
+14-custom-snow time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=false, time=6000, weather=SNOW]
+15-independent-skies time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=false, time=18000, weather=THUNDER]
+16-custom-noon time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=false, time=6000, weather=CLEAR]
+17-custom-foreground time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=false, time=18000, weather=THUNDER]
+18-stacked-live-near time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=false, time=18000, weather=THUNDER]
+19-stacked-live-far time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=true, time=18000, weather=THUNDER]
+20-stacked-custom-near time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=false, time=18000, weather=THUNDER]
+21-reset-live time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=true, time=18000, weather=THUNDER]
+22-reset-detached time=6000 rain=0.0 thunder=0.0 sky_light=15 block_light=0 ceiling=SkyWindowSettings[followWorld=true, time=18000, weather=THUNDER]

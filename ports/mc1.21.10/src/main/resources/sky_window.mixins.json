@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "dev.skylight.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["ChunkLightProviderMixin", "ChunkSkyLightProviderMixin", "LightStorageAccessor"],
+  "injectors": { "defaultRequire": 1 }
+}

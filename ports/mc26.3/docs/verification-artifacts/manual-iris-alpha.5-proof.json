@@ -1,0 +1,22 @@
+{
+  "minecraft": "26.3",
+  "kind": "shader_movement",
+  "artifact_sha256": "1356c2f176b339592909afd93ae61ccc26f7be725bbd20f5a5aeca6fc96a2100",
+  "settings_mode": "manual",
+  "captures_sha256": {
+    "23-walk-still-no-bob.png": "052453f6c0589e359340b35ae889f40f3c421af91e7e986ab9528a5033f9ba53",
+    "24-walk-moving-no-bob.png": "3af9a14768ae0a086de877ed7a7e7d17e59447e2f11bd7f61bf9f2daf44dbe44",
+    "25-walk-moving-bob.png": "f015f50c73c9e9f47a89d75ff247878e9a3da7a7672094f2ba68f863cfbb63cb",
+    "26-walk-moving-bob-rebuild.png": "0d47894a829429bd121845a3678b6085a16f563e004bb36934943e9126feec13"
+  },
+  "process_exit": "successful",
+  "recorded_at": "2026-10-04T06:04:21.361732+00:00",
+  "visually_reviewed": true,
+  "review_notes": "Primary agent and renderer agent independently inspected all four final alpha5 manual Iris-on PNGs on 2026-10-04. Scenes 23 still, 24 walking without view bobbing, 25 walking with view bobbing, and 26 walking with chunk rebuild all show continuous manual blue sky and a white Sun with intact walls. No diagonal wedge, horizontal bands, or native shader-pack sky leakage appears. The run exited cleanly with the verified Java 25 runtime and current release artifact hash.",
+  "run_record": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha5/run-record.json",
+  "run_record_sha256": "d7577a508db7746a2fa7337021f584dfa750efe8afdac2a5fd3330df07f2b2a5",
+  "client_log": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha5/client.log",
+  "client_log_sha256": "213c066d4869f830b352d81e016fbb9f141016c9c5022f163ac5957776ac47c6",
+  "completion_sha256": "739a268548cb23ac1b4973733f7d47a365e284db68e538590e1aa5ccbb5ab671",
+  "original_output_directory": "ports/mc26.3/build/render-test-manual-movement-iris-on-alpha5"
+}

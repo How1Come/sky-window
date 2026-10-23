@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "dev.skylight.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "WorldRendererMixin",
+    "IrisRenderingPipelineMixin",
+    "MinecraftClientMixin",
+    "KeyBindingMixin",
+    "GameRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
